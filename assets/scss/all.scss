@@ -1,0 +1,15 @@
+@import "../../node_modules/bootstrap/scss/functions";
+@import './utils/variables';
+@import "../../node_modules/bootstrap";
+
+
+
+@import './layout/navbar.scss';
+
+
+@import './pages/assignment.scss';
+@import './pages/admin.scss';
+@import './pages/edit.scss';
+@import './pages/view.scss';
+
+
