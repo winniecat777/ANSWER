@@ -1,7 +1,8 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import './utils/variables';
-@import "../../node_modules/bootstrap";
 
+
+@import './utils/base';
 
 
 @import './layout/navbar.scss';
@@ -13,3 +14,4 @@
 @import './pages/view.scss';
 
 
+@import "../../node_modules/bootstrap";
