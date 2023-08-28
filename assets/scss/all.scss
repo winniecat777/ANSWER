@@ -2,6 +2,7 @@
 @import './utils/variables';
 
 
+
 @import './utils/base';
 
 
@@ -14,4 +15,4 @@
 @import './pages/view.scss';
 
 
-@import "../../node_modules/bootstrap";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
