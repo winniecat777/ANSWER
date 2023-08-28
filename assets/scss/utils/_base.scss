@@ -1,6 +1,6 @@
 // 字體
-@import url('https://fonts.google.com/specimen/Lato');
-@import url('https://fonts.google.com/specimen/roboto+mono?query=robo');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
 // google icon
 @import url('https://fonts.googleapis.com/css2?family=Material+Icons');
@@ -14,6 +14,9 @@ $font-sizes: (
   5: $font-size * 0.75,
 ) !default;
 // scss-docs-end font-sizes
+.fs-4{
+    font-style: 14px;
+}
 
 
 body {
