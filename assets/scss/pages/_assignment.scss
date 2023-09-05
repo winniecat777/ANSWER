@@ -1,0 +1,13 @@
+.img-member{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    
+    img{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
