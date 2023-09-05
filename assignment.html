@@ -4,9 +4,303 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ANSWER-assignment</title>
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+  <script type="module" crossorigin src="/ANSWER/assets/main-cefa8885.js"></script>
+  <link rel="stylesheet" href="/ANSWER/assets/main-5e59e254.css">
 </head>
 <body>
+    <!-- nav -->
+    <nav class="nav py-6 bg-light min-vh-100 min-w-200 flex-column position-fixed">
+    <h1 class="mb-6">
+        <a class="px-6" href="index.html"><img src="/ANSWER/assets/logo-ANSWER-5336fb45.svg" alt="logo"></a>
+    </h1>
+    <ul class="list-unstyled fw-bold">
+        <li>
+            <a href="###" class=" py-9 px-6 text-dark">
+                <span class="material-icons me-3 align-middle"> insert_chart </span>Dashboard</a>
+        </li>
+        <li>
+            <a href="###" class="d-block py-9 px-6 text-dark">
+                <span class="material-icons me-3 align-middle">forum</span>Question</a>
+        </li>
+        <li>
+            <a href="assignment.html" class="text-success border-start border-4 border-success d-block py-9 px-6">
+                <span class="material-icons me-3 align-middle">assignment</span>Assignment</a>
+        </li>
+        <li>
+            <a href="###" class="d-block py-9 px-6 text-dark">
+                <span class="material-icons me-3 align-middle">video_library</span>Course</a>
+        </li>
+        <li>
+            <a href="admin.html" class="  d-block py-9 px-6 text-dark">
+                <span class="material-icons me-3 align-middle">group</span>Admin</a>
+        </li>
+        <li>
+            <a href="###" class="d-block py-9 px-6 text-dark">
+                <span class="material-icons me-3 align-middle">settings</span>Settings</a>
+        </li>
+    </ul>
+    <div class="d-flex ps-6 pe-10 mt-auto">
+        <div class="img-member me-3"><img src="/ANSWER/assets/andychen-f14fef59.jpeg" alt="andychen"></div>
+        <div>
+            <div class="fw-bold">Andy Chen</div>
+            <div class="text-gray fs-4">andy0401@mail.com</div>
+        </div>
+    </div>
+</nav>
+    <main class="main ms-8">
+        <div class="container py-6">
+            <div class="row mb-6">
+                <div class="col-12 d-flex align-items-center">
+                    <h2 class="fs-1 fw-bold me-11 mb-0">Assignment</h2>
+                    <div class="fw-bold dropdown">
+                        <button
+                        type="button"
+                        class="btn d-flex border-0 align-items-center fs-3 fw-bold p-1"
+                        type="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        All Courses
+                        <span class="material-icons text-success"> expand_more </span>
+                    </button>
+                
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">HTML&CSS</a></li>
+                        <li><a class="dropdown-item" href="#">Bootstrap 5</a></li>
+                        <li><a class="dropdown-item" href="#">Web Layout</a></li>
+                        <li><a class="dropdown-item" href="#">JavaScript</a></li>
+                        <li><a class="dropdown-item" href="#">Vue</a></li>
+                        <li><a class="dropdown-item" href="#">React</a></li>
+                    </ul>
+                    </div>
+                    <ul class="list-unstyled d-flex ms-auto mb-0">
+                      <li class="me-4"><a href="###"><span class="material-icons">
+                        search
+                        </span></a></li>
+                      <li><a href="###"><span class="material-icons bold link-hover-success">
+                        notifications_active
+                        </span></a></li>
+                    </ul> 
+            </div>
+
+            <!-- list-group & card -->
+            <div class="row justify-content-end ">
+                <!-- 左邊 list-group -->
+                <div class="col-12 col-md-4">
+                <div class="dropdown align-items-center">
+                    <a href="###" class="d-block mb-1 fw-bold" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                    All (4)<span class="material-icons  ms-2 link-success">
+                        expand_more
+                        </span>
+                    </a>
+
+                    <ul class="dropdown-menu show p-0 w-100" aria-labelledby="dropdownMenuButton1">
+                    <li class="border-bottom"><a class="dropdown-item" aria-current="true" href="###">
+                        <div class="d-flex justify-content-between fs-5 mb-1">
+                        <div>Chapter Assignment 2</div>
+                        <div>4 hrs ago</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="fw-bold text-truncate">Please check this file…</div>
+                        <div class="fs-5 text-secondary text-nowrap">Emily Wang</div>
+                        </div>
+                    </a></li>
+                    
+                    <li class="border-bottom"><a class="dropdown-item" aria-current="true" href="###">
+                        <div class="d-flex justify-content-between fs-5 mb-1">
+                        <div>Chapter Assignment 1</div>
+                        <div>12 hrs ago</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="fw-bold text-truncate">My Homework</div>
+                        <div class="fs-5 text-secondary text-nowrap">David Xu</div>
+                        </div>
+                    </a></li>
+                   
+                    <li class="border-bottom"><a class="dropdown-item" aria-current="true" href="###">
+                        <div class="d-flex justify-content-between fs-5 mb-1">
+                        <div>Final Assignment</div>
+                        <div>18 hrs ago</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="fw-bold text-truncate">Have a problem with this…</div>
+                        <div class="fs-5 text-secondary text-nowrap">Tony Wei</div>
+                        </div>
+                    </a></li>
+                    
+                    <li><a class="dropdown-item" aria-current="true" href="###;">
+                        <div class="d-flex justify-content-between fs-5 mb-1">
+                        <div>Final Assignment</div>
+                        <div>19 hrs ago</div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="fw-bold text-truncate">Did I do it right?</div>
+                        <div class="fs-5 text-secondary text-nowrap">Christina Lin</div>
+                        </div>
+                    </a></li>
+                    </ul>
+                </div>
+          
+        </div>
+        <!-- 右邊 card -->
+        <div class="col-12 col-md-8 position-relative">
+          <div class="text-end fs-5 text-secondary mb-2 pt-1">2 comments</div>
+
+          <!-- 主要內容 -->
+          <div class="card mb-3">
+            <!-- card-header -->
+            <div class="card-header d-flex justify-content-between align-items-center">
+              <div>
+                <div class="fs-5 mb-1">Chapter Assignment 2 / HTML&CSS</div>
+                <div class="fw-bold">Please check this file for me, thanks!</div>
+              </div>
+              <a href="###"><span class="material-icons">
+                more_vert
+                </span></a>
+            </div>
+            <!-- card-body -->
+            <div class="card-body">
+              <!-- Emily Wang -->
+              <div class="d-flex pe-3 mb-3">
+                <div class="img-member flex-shrink-0 me-2">
+                  <img src="/ANSWER/assets/emilywang-cc5a821b.jpeg" alt="emilywang" class="mw-100">
+                </div>
+                <div class="border-bottom">
+                  <div class="fw-bold mb-1">Emily Wang</div>
+                  <div class="fs-5 text-secondary mb-3">10:38 AM (4 hours ago)</div>
+                  <p class="fs-4 mb-3">
+                    Hi Teacher, the attached file is my homework of chapter 2. And here comes a question: Why in the following code the height of the <code class="bg-light p-1 text-Roboto text-success">div</code> is bigger than the height of the <code class="bg-light p-1 text-Roboto text-success">img</code>? There is a gap below the image, but it doesn’t seems to be a padding/margin. <br>
+                    What is the gap or extra space below image?
+                  </p>
+                  <button class="fw-bold btn btn-light py-2 px-3 border mb-3">
+                    <span class="material-icons">
+                      attach_file
+                      </span>
+                    HW-2-David.zip
+                  </button>
+                </div>
+              </div>
+
+              <!-- Andy Chen -->
+              <div class="d-flex pe-3">
+                <div class="img-member flex-shrink-0 me-2">
+                  <img src="/ANSWER/assets/andychen-f14fef59.jpeg" alt="andychen" class="mw-100">
+                </div>
+                <div>
+                  <div class="fw-bold mb-1 d-flex justify-content-between">
+                    Andy Chen (You)
+                    <ul class="list-unstyled d-flex gap-3 mb-0">
+                      <li><a href="###"><span class="material-icons">
+                        grade
+                        </span></a></li>
+                      <li><a href="###"><span class="material-icons bold">
+                        edit
+                        </span></a></li>
+                    </ul>
+                  </div>
+                  <div class="fs-5 text-secondary mb-3">13:24 AM (1 hours ago)</div>
+                  <p class="fs-4 mb-3">
+                    Hi David, by default, an image is rendered inline, like a letter so it sits on the same line that a, b, c and d sit on. There is space below that line for the descenders you find on letters like g, j, p and q.
+                  </p>
+                  <p class="fs-4">
+                    You can:
+                  </p>
+                  <ul class="fs-4">
+                    <li>
+                      adjust the <code class="bg-light p-1 text-Roboto text-success">vertical-align</code> of the image to position it elsewhere (e.g. the <code class="bg-light p-1 text-Roboto text-success">middle</code> ) or 
+                    </li>
+                    <li>
+                      change the <code class="bg-light p-1 text-Roboto text-success">display</code> so it isn’t inline.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- footer -->
+          <div class="d-flex align-items-center justify-content-between">
+            <ul class="list-unstyled d-flex fs-1 gap-2 mb-0">
+              <li><a href="###" class="p-2"><span class="material-icons">
+                navigate_before
+                </span></a></li>
+              <li><a href="###" class="p-2"><span class="material-icons">
+                navigate_next
+                </span></a></li>
+            </ul>
+            <button class="btn btn-outline-success ms-auto px-5">Mark as read</button>
+            <button class="btn btn-success ms-3 px-5" id="Reply">Reply</button>
+          </div>
+
+          <!-- 編輯文字區 -->
+          <div class="card position-absolute bottom-0 start-0 end-0 mx-2" id="textEditor">
+            <div class="card-header d-flex p-3">
+              <a href="###" class="fw-bold me-4">
+                Body Text<i class="bi bi-caret-down-fill ms-2 fs-8"></i>
+              </a>
+              <ul class="list-unstyled d-flex mb-0 gap-4">
+                <li>
+                  <a href="###"><span class="material-icons">
+                    format_bold
+                    </span></a>
+                </li>
+                <li>
+                  <a href="###"><span class="material-icons">
+                    format_italic
+                    </span></a>
+                </li>
+                <li>
+                  <a href="###"><span class="material-icons">
+                    list
+                    </span></a>
+                </li>
+                <li>
+                  <a href="###"><span class="material-icons">
+                    format_list_numbered
+                    </span></a>
+                </li>
+                <li>
+                  <a href="###"><span class="material-icons bold">
+                    imagesmode
+                    </span></a>
+                </li>
+                <li>
+                  <a href="###"><span class="material-icons">
+                    link
+                    </span></a>
+                </li>
+                <li>
+                  <a href="###"><span class="material-icons">
+                    code
+                    </span></a>
+                </li>
+              </ul>
+              
+            </div>
+            <div class="card-body p-0 position-relative">
+              <textarea name="" id="" placeholder="Reply an answer…" class="d-block w-100 py-3 px-4 border-0"></textarea>
+              <div class="text-end position-absolute bottom-0 end-0 px-4 py-3">
+                <button class="btn btn-outline-success py-2 px-4 me-3" id="Cancel">Cancel</button>
+                <button class="btn btn-success py-2 px-4">Reply</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+    </main>
+
     
+    
+
+     <!-- jq -->
+     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+     <script>
+       $(document).ready(function() {
+         $('#textEditor').hide();
+         $('#Reply,#Cancel').click(function(event){
+           $('#textEditor').slideToggle(800);
+         }); 
+       });
+     </script>
 </body>
 </html>
