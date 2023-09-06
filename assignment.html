@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANSWER-assignment</title>
     <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-  <script type="module" crossorigin src="/ANSWER/assets/main-cefa8885.js"></script>
-  <link rel="stylesheet" href="/ANSWER/assets/main-5e59e254.css">
+  <script type="module" crossorigin src="/ANSWER/assets/main-48ca4962.js"></script>
+  <link rel="stylesheet" href="/ANSWER/assets/main-c3dbb0ea.css">
 </head>
 <body>
     <!-- nav -->
-    <nav class="nav py-6 bg-light min-vh-100 min-w-200 flex-column position-fixed">
+    <nav class="nav py-6 bg-light min-vh-100 flex-column  position-fixed">
     <h1 class="mb-6">
         <a class="px-6" href="index.html"><img src="/ANSWER/assets/logo-ANSWER-5336fb45.svg" alt="logo"></a>
     </h1>
@@ -41,18 +41,18 @@
                 <span class="material-icons me-3 align-middle">settings</span>Settings</a>
         </li>
     </ul>
-    <div class="d-flex ps-6 pe-10 mt-auto">
+    <div class="d-flex ps-6 pe-10 mt-auto align-items-center">
         <div class="img-member me-3"><img src="/ANSWER/assets/andychen-f14fef59.jpeg" alt="andychen"></div>
         <div>
-            <div class="fw-bold">Andy Chen</div>
-            <div class="text-gray fs-4">andy0401@mail.com</div>
+            <h3 class="fw-bold mb-1">Andy Chen</h3>
+            <h4 class="text-gray fs-4 m-0">andy0401@mail.com</h4>
         </div>
     </div>
 </nav>
-    <main class="main ms-8">
+    <main class="main">
         <div class="container py-6">
-            <div class="row mb-6">
-                <div class="col-12 d-flex align-items-center">
+            <div class="row">
+                <div class="col-12 d-flex align-items-center mb-6">
                     <h2 class="fs-1 fw-bold me-11 mb-0">Assignment</h2>
                     <div class="fw-bold dropdown">
                         <button
@@ -90,13 +90,13 @@
                 <div class="col-12 col-md-4">
                 <div class="dropdown align-items-center">
                     <a href="###" class="d-block mb-1 fw-bold" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                    All (4)<span class="material-icons  ms-2 link-success">
+                    All (4)<span class="material-icons  ms-2  link-success">
                         expand_more
                         </span>
                     </a>
 
                     <ul class="dropdown-menu show p-0 w-100" aria-labelledby="dropdownMenuButton1">
-                    <li class="border-bottom"><a class="dropdown-item" aria-current="true" href="###">
+                    <li class="border-bottom active"><a class="dropdown-item" aria-current="true" href="###">
                         <div class="d-flex justify-content-between fs-5 mb-1">
                         <div>Chapter Assignment 2</div>
                         <div>4 hrs ago</div>
@@ -218,7 +218,7 @@
               </div>
             </div>
           </div>
-          <!-- footer -->
+          
           <div class="d-flex align-items-center justify-content-between">
             <ul class="list-unstyled d-flex fs-1 gap-2 mb-0">
               <li><a href="###" class="p-2"><span class="material-icons">
@@ -229,11 +229,47 @@
                 </span></a></li>
             </ul>
             <button class="btn btn-outline-success ms-auto px-5">Mark as read</button>
-            <button class="btn btn-success ms-3 px-5" id="Reply">Reply</button>
+            <button class="btn btn-success ms-3 px-5" id="replyButton">Reply</button>
           </div>
 
-          <!-- 編輯文字區 -->
-          <div class="card position-absolute bottom-0 start-0 end-0 mx-2" id="textEditor">
+          <!-- 文字編輯區 -->
+          <div class="ckeditor d-none container">
+            <div id="editor"></div>
+            <div class="d-flex">
+                <div class="ck-btns mb-3 me-6 d-flex">
+                    <button
+                        class="cancel-btn btn btn-outline-success ms-auto px-5 me-2">
+                        Cancel
+                    </button>
+                    <button
+                        class="reply-btn btn btn-success ms-auto px-5"
+                        id="replyButton"
+                        data-bs-toggle="modal"
+                        data-bs-target="#replySuccess">
+                        Reply
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- comment success modal -->
+        <div
+            class="modal fade fw-bold"
+            id="replySuccess"
+            tabindex="-1"
+            aria-labelledby="replySuccess"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div
+                        class="modal-body text-success fw-bold d-flex align-items-center">
+                        <span class="material-icons me-2"> check_circle </span>
+                        Successfully Replied !!
+                    </div>
+                </div>
+            </div>
+        </div>
+          <!-- <div class="card position-absolute bottom-0 start-0 end-0 mx-2" id="textEditor">
             <div class="card-header d-flex p-3">
               <a href="###" class="fw-bold me-4">
                 Body Text<i class="bi bi-caret-down-fill ms-2 fs-8"></i>
@@ -284,16 +320,76 @@
                 <button class="btn btn-success py-2 px-4">Reply</button>
               </div>
             </div>
-          </div>
+          </div> -->
 
         </div>
     </main>
 
+    <script>
+        ClassicEditor.create(document.querySelector("#editor"), {
+            placeholder: "Reply an answer…",
+            heading: {
+                options: [
+                    {
+                        model: "paragraph",
+                        title: "Body Text",
+                        class: "ck-heading_paragraph",
+                    },
+                    {
+                        model: "heading1",
+                        view: "h1",
+                        title: "Heading 1",
+                        class: "ck-heading_heading1",
+                    },
+                    {
+                        model: "heading2",
+                        view: "h2",
+                        title: "Heading 2",
+                        class: "ck-heading_heading2",
+                    },
+                ],
+            },
+            toolbar: [
+                "heading",
+                "bold",
+                "italic",
+                "bulletedList",
+                "numberedList",
+                "uploadImage",
+                "link",
+                "code", // 沒顯示
+            ],
+        })
+            .then((res) => {
+                console.log("success");
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+
+        const editor = document.querySelector(".ckeditor");
+        const replyBtn = document.getElementById("replyButton");
+
+        const cancelButton = document.querySelector(".cancel-btn");
+        const replyButton = document.querySelector(".reply-btn");
+
+        replyBtn.addEventListener("click", () => {
+            editor.classList.remove("d-none");
+        });
+
+        cancelButton.addEventListener("click", () => {
+            editor.classList.add("d-none");
+        });
+
+        replyButton.addEventListener("click", () => {
+            editor.classList.add("d-none");
+        });
+    </script>
     
     
 
      <!-- jq -->
-     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+     <!-- <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
      <script>
        $(document).ready(function() {
          $('#textEditor').hide();
@@ -301,6 +397,6 @@
            $('#textEditor').slideToggle(800);
          }); 
        });
-     </script>
+     </script> -->
 </body>
 </html>
