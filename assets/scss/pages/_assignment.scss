@@ -1,3 +1,17 @@
+.main{
+    margin-left: 302.48px;
+}
+
+.dropdown-item{
+    &:hover{
+        background-color: $gray-100;
+    }
+}
+
+.active{
+    background-color: $gray-100;
+}
+
 .img-member{
     width: 40px;
     height: 40px;
@@ -10,4 +24,30 @@
         top: 50%;
         transform: translateY(-50%);
     }
+}
+
+.btn{
+    border-radius: 2px;
+}
+
+.ckeditor {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+}
+
+.ck-btns {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+.ck-editor__editable {
+	height: 270px;
+
+	&::before {
+		content: attr(data-placeholder);
+		color: $gray-100;
+	}
 }
